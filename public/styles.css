@@ -1,0 +1,51 @@
+:root {
+    --blue: #96e6e4;
+    --white: #e0f8f6;
+
+    --darkBlue: #047b77;
+    --mediumBlue: #3DCCC7;
+    /* --darkBlue: #07beb8;
+    --mediumBlue: #3DCCC7; */
+
+    /* --blue: #81a4cd;
+    --white: #dbe4ee;
+
+    --darkBlue: #054a91;
+    --mediumBlue: #3e7cb1; */
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: var(--white);
+}
+
+.navbar {
+    background-color: var(--blue);
+}
+.navbar-brand > img{
+    margin-right: 10px;
+}
+.cartWidget {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border-radius: 2px;
+    /* border: 1px solid var(--mediumBlue); */
+    box-shadow: 0 0 2px var(--darkBlue);
+    background-color: #dbe4ee3d;
+    min-width: 75px;
+}
+.cartWidget > p {
+    margin: 0;
+}
+
+main {
+    padding: 20px 50px;
+}
