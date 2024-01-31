@@ -4,22 +4,7 @@
 
     --darkBlue: #047b77;
     --mediumBlue: #3DCCC7;
-    /* --darkBlue: #07beb8;
-    --mediumBlue: #3DCCC7; */
-
-    /* --blue: #81a4cd;
-    --white: #dbe4ee;
-
-    --darkBlue: #054a91;
-    --mediumBlue: #3e7cb1; */
 }
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
 
 body {
     background-color: var(--white);
@@ -37,7 +22,6 @@ body {
     align-items: center;
     padding: 10px;
     border-radius: 2px;
-    /* border: 1px solid var(--mediumBlue); */
     box-shadow: 0 0 2px var(--darkBlue);
     background-color: #dbe4ee3d;
     min-width: 75px;
