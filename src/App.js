@@ -7,7 +7,7 @@ function App() {
   return (
     <div>
       <NavBar/>
-      <ItemListContainer/>
+      <ItemListContainer greeting={"Bienvenidos a la entrega de React"}/>
     </div>
   );
 }

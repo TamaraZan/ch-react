@@ -1,8 +1,7 @@
-function ItemListContainer() {
+function ItemListContainer({greeting}) {
     return (
         <main>
-          {/* greeting */}
-          <h2>Bienvenidos a la entrega de React</h2>
+          <h2>{greeting}</h2>
         </main>
     );
   }
