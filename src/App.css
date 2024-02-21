@@ -33,3 +33,12 @@ body {
 main {
     padding: 20px 50px;
 }
+
+.detailContainer{
+    margin: 15px 20%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: lightcoral;
+}

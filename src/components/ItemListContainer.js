@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import ItemCount from "./ItemCount/ItemCount";
 import ItemList from "./ItemList";
 import {fetchItems} from "./asyncMock";
 
@@ -14,11 +13,10 @@ function ItemListContainer({greeting}) {
   }, [])
 
   return (
-      <main>
+      <div>
         <h2>{greeting}</h2>
         <ItemList items={productos}/>
-        <ItemCount stock={5} initial={1} onAdd={(cant) => alert("Items agregados al carrito: " + cant)}/>
-      </main>
+      </div>
   );
 }
   
