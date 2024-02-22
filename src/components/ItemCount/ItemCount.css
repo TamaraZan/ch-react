@@ -1,9 +1,9 @@
 
 .itemCount {
-    width: 200px;
     margin: 15px;
     display: flex;
     flex-direction: column;
+    gap: 10px;
 }
 .controls {
     display: flex;
@@ -11,26 +11,16 @@
     justify-content: space-evenly;
     align-items: center;
 }
-
-.itemCount button {
-    padding: 3px;
-    background-color: var(--blue);
-    border: var(--darkBlue) solid 2px;
-    border-radius: 3px;
-}
-
-.controls button{
-    width: 40px;
-}
 .controls p {
-    margin-bottom: 0;
+    margin: 0;
 }
 
 .cartBtn {
+    width: 50%;
     align-self: center;
-    width: 50px;
+    padding: 7px 10px;
     margin: 5px 0;
-}
-.cartBtn:disabled {
-    filter: grayscale(70%);
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }

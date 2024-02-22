@@ -1,0 +1,16 @@
+.cartWidget {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px;
+    border-radius: 2px;
+    box-shadow: 0 0 2px var(--darkBlue);
+    background-color: #dbe4ee3d;
+    min-width: 75px;
+}
+.cartWidget > img {
+    height: 25px;
+}
+.cartWidget > p {
+    margin: 0;
+}

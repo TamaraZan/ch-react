@@ -1,0 +1,6 @@
+.navbar {
+    background-color: var(--blue);
+}
+.navbar-brand > img{
+    margin-right: 10px;
+}

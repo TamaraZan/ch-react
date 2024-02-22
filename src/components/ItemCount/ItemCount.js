@@ -15,12 +15,13 @@ function ItemCount({stock, initial, onAdd}) {
     return (
         <div className="itemCount">
             <div className="controls">
-                <button onClick={handleClickMenos}> - </button>
-                <p>{count}</p>
-                <button onClick={handleClickMas}> + </button>
+                <button className="btn" onClick={handleClickMenos} disabled={count<2}> - </button>
+                <p>{stock? count : 0}</p>
+                <button className="btn" onClick={handleClickMas} disabled={count>=stock}> + </button>
             </div>
-            <button className="cartBtn" onClick={() => onAdd(count)} disabled={!stock}>
-                <img src={cartIcon}/>
+            <button className="btn cartBtn" onClick={() => onAdd(count)} disabled={!stock}>
+                <p>Agregar al carrito</p>
+                <img src={cartIcon} alt="Icono de carrito"/>
             </button>
         </div>
     )
