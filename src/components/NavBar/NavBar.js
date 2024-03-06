@@ -1,5 +1,5 @@
 import CartWidget from "../CartWidget/CartWidget";
-import LogoImg from "./logo.png"
+import LogoImg from "../../assets/logo.png"
 import { Link } from "react-router-dom";
 
 import "./NavBar.css"

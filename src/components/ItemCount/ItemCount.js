@@ -1,6 +1,6 @@
 import "./ItemCount.css"
 import { useState } from "react";
-import cartIcon from "../icon-cart.svg"
+import cartIcon from "../../assets/icon-cart.svg"
 
 function ItemCount({stock, initial, onAdd}) {
     function handleClickMas(){

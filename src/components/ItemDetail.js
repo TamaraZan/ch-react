@@ -1,6 +1,11 @@
+import { useState } from "react";
 import ItemCount from "./ItemCount/ItemCount";
+import { Link } from "react-router-dom";
 
 function ItemDetail({title, category, description, price, pictureUrl, stock}) {
+
+    const [itemsAdded, setItemsAdded] = useState(0)
+
     return (
         <div className="itemDetail card">
             <img src={pictureUrl} className="card-img-top" alt={"imagen "+title}/>
@@ -12,7 +17,12 @@ function ItemDetail({title, category, description, price, pictureUrl, stock}) {
                 <p className="card-text itemPrice">{price}</p>
             </div>
             <div className="card-footer">
-                <ItemCount stock={stock} initial={1} onAdd={(cant) => alert("Items agregados al carrito: " + cant)}/>
+                {itemsAdded? (
+                    <Link to="/cart" className="btn">Ir al carrito</Link>
+                ) : (
+                    <ItemCount stock={stock} initial={1} onAdd={(cant) => setItemsAdded(cant)}/>
+                )}
+                
             </div>
         </div>
     )

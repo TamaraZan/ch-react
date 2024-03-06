@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
-import ItemDetail from "./ItemDetail";
-import { fetchItemsById } from "./asyncMock";
+import ItemDetail from "../components/ItemDetail";
+import { fetchItemsById } from "../components/asyncMock";
 import { useParams } from "react-router-dom";
+import Loader from "../components/Loader/Loader"
 
 function ItemDetailContainer() {
     const [product, setProduct] = useState(null);
@@ -16,7 +17,7 @@ function ItemDetailContainer() {
 
     return (
         <div className="detailContainer">
-            <ItemDetail {...product}/>
+            {product? <ItemDetail {...product}/> : <Loader/>}
         </div>
     )
 }

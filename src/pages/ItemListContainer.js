@@ -1,20 +1,23 @@
 import { useState, useEffect } from "react";
-import ItemList from "./ItemList";
-import { fetchItems, fetchItemsByCateg } from "./asyncMock";
+import ItemList from "../components/ItemList";
+import { fetchItems, fetchItemsByCateg } from "../components/asyncMock";
 import { useParams } from "react-router-dom";
+import Loader from "../components/Loader/Loader";
 
 
 function ItemListContainer({greeting}) {
-  const [productos, setProducts] = useState([])
+  const [showingCategory, setShowingCategory] = useState(null);
+  const [productos, setProducts] = useState(null);
 
   const {categoryId} = useParams();
 
   useEffect( () => {
     const fetchFunction = categoryId? fetchItemsByCateg : fetchItems;
-    // fetchItems()
-    //   .then( res => setProducts(categoryId? res.filter((prod) => categoryId === prod.category): res) )
     fetchFunction(categoryId)
-      .then( res => setProducts(res) )
+      .then( res => {
+        setShowingCategory(categoryId);
+        return setProducts(res);
+      } )
       .catch( err => alert("Error al cargar los productos. " + err) )
   }, [categoryId])
 
@@ -22,7 +25,7 @@ function ItemListContainer({greeting}) {
       <div>
         <h2>{greeting}</h2>
         <h3>{categoryId? "Buscando " + categoryId : ""}</h3>
-        <ItemList items={productos}/>
+        {categoryId===showingCategory? <ItemList items={productos}/> : <Loader/>}
       </div>
   );
 }
