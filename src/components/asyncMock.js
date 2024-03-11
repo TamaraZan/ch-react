@@ -13,7 +13,7 @@ const items = [
         "id": 101,
         "category": "notebooks",
         "description": 'Marca: Samsung, sistema operativo: Windows 11 Home, display: 14.0", procesador: Intel® Core™ i5-1340P, memoria: 16 GB',
-        "price": "$3.431.999",
+        "price": 3431999,
         "pictureUrl": "https://samsungar.vtexassets.com/arquivos/ids/188996",
         "stock": 0
     },
@@ -22,7 +22,7 @@ const items = [
         "id": 102,
         "category": "notebooks",
         "description": 'La MacBook Air con chip M1 es una laptop superportátil, versátil y rápida. Tiene una increíble pantalla Retina, un diseño delgado y sin ventilador que la hace muy silenciosa y una batería que te acompaña todo el día. Esta MacBook Air vuela.',
-        "price": "$1.399.999",
+        "price": 1399999,
         "pictureUrl": "https://http2.mlstatic.com/D_NQ_NP_927163-MLA48622311771_122021-O.webp",
         "stock": 1
     },
@@ -31,7 +31,7 @@ const items = [
         "id": 201,
         "category": "cellphones",
         "description": "Marca: Samsung, Procesador: Octa-Core, Camara frontal: 32.0 MP, Camara trasera: 12.0 MP + 12.0 MP + 8.0 MP, Memoria interna: 128 - 256, Tamaño de pantalla: 155.7 x 74.5 x 7.9",
-        "price": "$1.132.999",
+        "price": 1132999,
         "pictureUrl": "https://samsungar.vtexassets.com/arquivos/ids/191579",
         "stock": 2
     },
@@ -40,7 +40,7 @@ const items = [
         "id": 202,
         "category": "cellphones",
         "description": 'El iPhone 14 viene con el sistema de dos cámaras más impresionante en un iPhone 14, para que tomes fotos espectaculares con mucha o poca luz. Y te da más tranquilidad gracias a una funcionalidad de seguridad que salva vidas.',
-        "price": "$1.136.999",
+        "price": 1136999,
         "pictureUrl": "https://http2.mlstatic.com/D_NQ_NP_918579-MLM51559384401_092022-O.webp",
         "stock": 3
     },
@@ -49,7 +49,7 @@ const items = [
         "id": 301,
         "category": "tablets",
         "description": 'Elegantes y modernas, las Galaxy Tab A9 y Tab A9+ presentan un diseño elegante y un cuerpo de metal liso. Disfrutá del diseño de tablet exclusivo de Samsung en Graphite, Silver y Navy.',
-        "price": "$499.999",
+        "price": 499999,
         "pictureUrl": "https://samsungar.vtexassets.com/arquivos/ids/193454",
         "stock": 4
     },
@@ -58,7 +58,7 @@ const items = [
         "id": 302,
         "category": "tablets",
         "description": 'El iPad enamora a primera vista. Tiene una pantalla Liquid Retina de 10.9 pulgadas con diseño de borde a borde perfecta para trabajar, darles forma a tus ideas y hacer videollamadas. Además, viene en cuatro colores que van a alegrar tus días.1 Y si lo combinas con los accesorios diseñados especialmente para el iPad, tus posibilidades no tendrán fin.',
-        "price": "$699.000",
+        "price": 699000,
         "pictureUrl": "https://http2.mlstatic.com/D_NQ_NP_764857-MLA52988770506_122022-O.webp",
         "stock": 5
     },

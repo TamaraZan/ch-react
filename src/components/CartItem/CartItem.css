@@ -1,0 +1,13 @@
+
+.cartItem {
+    padding: 5px;
+    display: grid;
+    grid-template-columns: repeat(4, 20vw) 50px;
+    justify-content: center;
+    align-items: center;
+    /* background-color: white; */
+}
+
+.cartItem .btn {
+    height: 40px;
+}

@@ -1,23 +1,32 @@
 import { useState, useEffect } from "react";
 import ItemDetail from "../components/ItemDetail";
-import { fetchItemsById } from "../components/asyncMock";
 import { useParams } from "react-router-dom";
 import Loader from "../components/Loader/Loader"
+import { db } from "../firebase/firebaseConfig";
+import { collection, getDocs } from "firebase/firestore";
 
 function ItemDetailContainer() {
     const [product, setProduct] = useState(null);
 
     const {itemId} = useParams();
 
+    const productsCollectionRef = collection(db, "Productos");
+    const fetchItemsById = async () => {
+        const data = await getDocs(productsCollectionRef);
+        const productData = data.docs.map((doc) => ({
+          ...doc.data(),
+          id:doc.id
+        }))
+        setProduct(productData.find(item => item.id === itemId))
+    }
+
     useEffect(() => {
-        fetchItemsById(itemId)
-            .then( res => setProduct(res) )
-            .catch( err => alert("Error al cargar el producto. " + err ))
-    }, [itemId])
+        fetchItemsById()
+    }, [])
 
     return (
         <div className="detailContainer">
-            {product? <ItemDetail {...product}/> : <Loader/>}
+            {product? <ItemDetail {...product} itemId={itemId}/> : <Loader/>}
         </div>
     )
 }

@@ -10,7 +10,7 @@ function Item({id, title, price, pictureUrl}) {
                 <img src={pictureUrl} className="card-img-top" alt={"imagen "+title}/>
                 <div className="card-body">
                     <h5 className="card-title">{title}</h5>
-                    <p className="card-text itemPrice">{price}</p>
+                    <p className="card-text itemPrice">${price.toLocaleString("de-DE")}</p>
                 </div>
                 <div className="card-footer">
                     <Link className="btn" to={"/product/"+id}>Ver detalles</Link>
