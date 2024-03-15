@@ -5,8 +5,10 @@
     padding: 8px;
     border-radius: 2px;
     box-shadow: 0 0 2px var(--darkBlue);
-    background-color: #dbe4ee3d;
+    background-color: #c3d1e23d;
     min-width: 75px;
+    text-decoration: none;
+    color: inherit;
 }
 .cartWidget > img {
     height: 25px;

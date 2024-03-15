@@ -13,7 +13,7 @@ function ItemCount({stock, initial, onAdd}) {
     const [count, setCount] = useState(initial);
 
     return (
-        <div className="itemCount">
+        <div className="itemCount d-flex flex-column flex-lg-row">
             <div className="controls">
                 <button className="btn" onClick={handleClickMenos} disabled={count<2}> - </button>
                 <p>{stock? count : 0}</p>

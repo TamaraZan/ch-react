@@ -9,7 +9,7 @@ function CartItemsContext({children}) {
     const idInCart = (itemId) => cartItems.some(({id}) => itemId === id);
 
 
-    const clear = () => setCartItems([]);
+    const clearCart = () => setCartItems([]);
 
     const removeItem = (itemId) => {
         if(idInCart(itemId)) 
@@ -23,9 +23,16 @@ function CartItemsContext({children}) {
             alert("Este producto ya fue agregado al carrito.")
     }
     
+    const cartTotalPrice = () => {
+        let total = 0;
+        cartItems.forEach( item => total += item.precio * item.cantidad);
+        return total;
+    }
+    // cartTotal = () => cartItems.reduce((prev, current) => prev + current.precio * current.cantidad, 0);
+
 
     return (
-        <DataContext.Provider value={{cartItems, clear, removeItem, addItem}}>
+        <DataContext.Provider value={{cartItems, clearCart, removeItem, addItem, cartTotalPrice}}>
             {children}
         </DataContext.Provider>
     )

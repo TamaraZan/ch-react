@@ -1,4 +1,5 @@
 .navbar {
+    height: 85px;
     background-color: var(--blue);
 }
 .navbar-brand > img{

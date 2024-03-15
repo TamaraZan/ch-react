@@ -1,11 +1,21 @@
 
 .cartItem {
+    margin: 10px 0;
     padding: 5px;
+    min-height: 70px;
     display: grid;
-    grid-template-columns: repeat(4, 20vw) 50px;
+    grid-template-columns: auto repeat(3, 1fr) 50px;
+    gap: 20px;
     justify-content: center;
     align-items: center;
-    /* background-color: white; */
+}
+.cartItem picture{
+    width: 50px;
+    margin: 0 5px;
+    /* justify-self: start; */
+}
+.cartItem img{
+    width: 100%;
 }
 
 .cartItem .btn {

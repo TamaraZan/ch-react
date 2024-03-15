@@ -1,17 +1,20 @@
 import { useContext } from "react";
-import "./CartItem.css"
 import { DataContext } from "../../context/CartItemsContext";
+import "./CartItem.css"
 
 
-function CartItem({id, nombre, cantidad, precio}) {
+function CartItem({id, nombre, cantidad, precio, pictureUrl}) {
     const {removeItem} = useContext(DataContext);
     return (
-        <div className="cartItem">
+        <div className="cartItem card">
+            <picture>
+                <img src={pictureUrl} alt={"Imagen de " + nombre}/>
+            </picture>
             <p>{nombre}</p>
             <p>Cantidad: {cantidad}</p>
-            <p>${precio.toLocaleString("de-DE")} por Unidad</p>
-            <p>${(cantidad * precio).toLocaleString("de-DE")}</p>
-            <button onClick={() => removeItem(id)} className="btn"> X </button>
+            <p>Subtotal: ${(cantidad * precio).toLocaleString("de-DE")}</p>
+            <button onClick={() => removeItem(id)} className="btn"> 𐌢 </button>
+            {/*  🗑  ⤫ 𐌢 𐌗 ❌ */}
         </div>
     )
 }

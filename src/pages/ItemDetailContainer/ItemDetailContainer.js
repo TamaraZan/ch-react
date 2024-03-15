@@ -1,23 +1,21 @@
 import { useState, useEffect } from "react";
-import ItemDetail from "../components/ItemDetail";
+import ItemDetail from "../../components/ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
-import Loader from "../components/Loader/Loader"
-import { db } from "../firebase/firebaseConfig";
-import { collection, getDocs } from "firebase/firestore";
+import Loader from "../../components/Loader/Loader"
+import { db } from "../../firebase/firebaseConfig";
+import { doc, getDoc } from "firebase/firestore";
+import "./ItemDetailContainer.css"
 
 function ItemDetailContainer() {
     const [product, setProduct] = useState(null);
 
     const {itemId} = useParams();
 
-    const productsCollectionRef = collection(db, "Productos");
+    const productRef = doc(db, "Productos", itemId);
     const fetchItemsById = async () => {
-        const data = await getDocs(productsCollectionRef);
-        const productData = data.docs.map((doc) => ({
-          ...doc.data(),
-          id:doc.id
-        }))
-        setProduct(productData.find(item => item.id === itemId))
+        const data = await getDoc(productRef);
+        const productData = { ...data.data(), id:data.id };
+        setProduct(productData);
     }
 
     useEffect(() => {

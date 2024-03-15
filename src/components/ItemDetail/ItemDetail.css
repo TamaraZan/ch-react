@@ -1,0 +1,9 @@
+.itemDetail .itemDetail-img {
+    max-height: 250px;
+    object-fit: contain;
+    align-self: center;
+    justify-self: center;
+}
+.itemDetail .card-text:not(:last-child) {
+    margin-bottom: 15px;
+}

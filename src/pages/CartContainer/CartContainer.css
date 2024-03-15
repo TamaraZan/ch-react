@@ -1,0 +1,10 @@
+.cartContainer > .cartButtons {
+    display: flex;
+}
+.cartContainer > .cartButtons > *:hover {
+    background-color: whitesmoke;
+}
+.cartContainer > .total {
+    margin: 2.5vw;
+    text-align: center;
+}

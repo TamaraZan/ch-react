@@ -1,0 +1,6 @@
+.detailContainer{
+    margin: 15px 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

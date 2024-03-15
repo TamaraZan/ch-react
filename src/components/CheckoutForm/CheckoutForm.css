@@ -1,0 +1,26 @@
+.checkout {
+    width: 80vw;
+    max-width: 450px;
+    padding: 20px;
+    padding-bottom: 30px;
+    gap: 10px;
+
+}
+.checkout label {
+    font-weight: 600;
+}
+.checkout input {
+    border: 2px solid transparent;
+    border-bottom: 2px solid var(--darkBlue);
+    border-radius: 3px;
+}
+.checkout input:focus {
+    border: 2px solid var(--mediumBlue);
+    box-shadow: none;
+    outline: none;
+}
+
+
+.checkout > button {
+    margin-top: 25px;
+}

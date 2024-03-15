@@ -1,7 +1,8 @@
 import NavBar from "./components/NavBar/NavBar";
 import ItemListContainer from "./pages/ItemListContainer";
-import ItemDetailContainer from "./pages/ItemDetailContainer";
-import CartContainer from "./pages/CartContainer";
+import ItemDetailContainer from "./pages/ItemDetailContainer/ItemDetailContainer";
+import CartContainer from "./pages/CartContainer/CartContainer";
+import Checkout from "./pages/Checkout";
 import CartItemsContext from "./context/CartItemsContext";
 
 import { BrowserRouter, Route , Routes } from "react-router-dom";
@@ -22,6 +23,7 @@ function App() {
               <Route path="/category/:categoryId" element={<ItemListContainer  greeting={"Productos por categoría"}/>}/>
               <Route path="/product/:itemId" element={<ItemDetailContainer/>}/>
               <Route path="/cart" element={<CartContainer/>}/>
+              <Route path="/checkout" element={<Checkout/>}/>
             </Route>
             <Route path="*" element={<h2>404 page not found</h2>}/>
           </Routes>
