@@ -1,4 +1,6 @@
 import { createContext, useState } from "react";
+import swal from 'sweetalert';
+
 
 export const DataContext = createContext();
 
@@ -20,7 +22,7 @@ function CartItemsContext({children}) {
         if(!idInCart(itemData.id)) 
             setCartItems(prev => [...prev, itemData])
         else
-            alert("Este producto ya fue agregado al carrito.")
+            swal("Este producto ya fue agregado al carrito.");
     }
     
     const cartTotalPrice = () => {

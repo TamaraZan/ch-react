@@ -1,7 +1,6 @@
 :root {
     --blue: #96e6e4;
-    --white: #e0f8f6;
-
+    --white: #e2f3f1;
     --darkBlue: #047b77;
     --mediumBlue: #3DCCC7;
 }
@@ -21,6 +20,12 @@ p {
     margin: 0;
 }
 
+.itemPrice {
+    font-size: larger;
+    text-align: center;
+}
+
+
 .btn {
     border: transparent solid 2px;
     background-color: var(--blue);
@@ -39,7 +44,18 @@ p {
 	border-color: transparent;
 }
 
-.itemPrice {
-    font-size: larger;
-    text-align: center;
+.swal-button {
+    border: transparent solid 2px;
+    background-color: var(--blue);
+    color: black;
+}
+.swal-button:not([disabled]):hover{
+    border: var(--mediumBlue) solid 2px;
+    background-color: whitesmoke;
+}
+.swal-button:active {
+    background-color: var(--mediumBlue);
+}
+.swal-button:focus {
+	box-shadow: none;
 }

@@ -24,3 +24,10 @@
 .checkout > button {
     margin-top: 25px;
 }
+
+.checkout .form-hint {
+    color: red;
+    font-size: smaller;
+    font-weight: 600;
+    text-align: center;
+}

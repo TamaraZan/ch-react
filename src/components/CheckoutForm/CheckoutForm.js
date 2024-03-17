@@ -37,7 +37,8 @@ function CheckoutForm({onConfirm}) {
             <input id="chkout-tel" placeholder="Numero de telefono" type="tel" onChange={e => setTel(e.target.value)}/>
             <label htmlFor="chkout-mail">Tu e-mail: </label>
             <input id="chkout-mail" placeholder="E-mail" type="email" onChange={e => setMail(e.target.value)}/>
-            <button onClick={sendForm} className="btn"> Comprar </button>
+            <button onClick={sendForm} className="btn" disabled={!(name && tel && mail)}> Comprar </button>
+            <p className="form-hint">{!(name && tel && mail)? "Falta agregar datos" : ""}</p>
         </form>
     )
 }
