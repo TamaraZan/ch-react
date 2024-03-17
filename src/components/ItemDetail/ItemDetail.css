@@ -1,3 +1,7 @@
+.itemDetail {
+    min-width: 230px;
+}
+
 .itemDetail .itemDetail-img {
     max-height: 250px;
     object-fit: contain;

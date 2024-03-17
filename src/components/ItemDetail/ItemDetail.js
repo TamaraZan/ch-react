@@ -23,7 +23,7 @@ function ItemDetail({itemId, title, category, description, price, pictureUrl, st
 
     return (
         <div className="itemDetail card">
-            <div className="d-flex flex-sm-column flex-lg-row">
+            <div className="d-flex flex-column flex-lg-row">
                 <img src={pictureUrl} className="card-img-top itemDetail-img" alt={"imagen de "+title}/>
                 <div className="card-body">
                     <p className="card-text">Categoría: {category}</p>

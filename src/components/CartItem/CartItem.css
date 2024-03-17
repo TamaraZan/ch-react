@@ -12,7 +12,6 @@
 .cartItem picture{
     width: 50px;
     margin: 0 5px;
-    /* justify-self: start; */
 }
 .cartItem img{
     width: 100%;
@@ -20,4 +19,12 @@
 
 .cartItem .btn {
     height: 40px;
+}
+
+@media screen and (max-width: 500px) {
+    .cartItem{
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+    }
 }
